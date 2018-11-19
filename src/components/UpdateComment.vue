@@ -37,7 +37,7 @@ export default {
       updateObject: {
         'name': undefined,
         'comment': undefined,
-        'animal_id': undefined
+        'drink_id': undefined
       }
     }
   },
@@ -67,7 +67,7 @@ export default {
       }
     },
     putComment() {
-      this.updateObject.animal_id = this.commentToUpdate[0].animal_id
+      this.updateObject.drink_id = this.commentToUpdate[0].drink_id
       this.updateObject.name = event.target.name.value
       this.updateObject.comment = event.target['new-comment'].value
       if(event.target.name.value.length > 0 && event.target['new-comment'].value.length > 0) {
@@ -87,7 +87,7 @@ export default {
       this.commentId = undefined
       this.updateObject.name = ''
       this.updateObject.comment = ''
-      this.updateObject.animal_id = undefined
+      this.updateObject.drink_id = undefined
     }
   }
 }

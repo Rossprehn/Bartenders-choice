@@ -16,7 +16,7 @@
 
 export default {
   name: 'NewCommentForm',
-  props: ['commentToggle', 'apiURL', 'animalFact', 'getComments', 'showAddCommentComponent'],
+  props: ['commentToggle', 'apiURL', 'drinkRecipe', 'getComments', 'showAddCommentComponent'],
   data() {
     return {
       commentObject: {
@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     postComment() {
-      this.commentObject.drink_id = this.animalFact.drink_id
+      this.commentObject.drink_id = this.drinkRecipe.drink_id
       if(event.target.name.value.length > 0 && event.target['new-comment'].value.length > 0) {
         fetch(this.apiURL + 'comments', {
           method: 'POST',
@@ -45,7 +45,7 @@ export default {
       }
       this.commentObject.name = ''
       this.commentObject.comment = ''
-      this.commentObject.animal_id = undefined
+      this.commentObject.drink_id = undefined
     }
   }
 }

@@ -4,7 +4,7 @@
     <main>
       <div id='app-body'>
         <DrinkCard :recipe='currentRecipe'/>
-        <ButtonContainer :getRecipe='getRecipe' :apiURL='apiURL' :fact='currentFact' :currentComments='currentComments' :getComments='getComments'/>
+        <ButtonContainer :getRecipe='getRecipe' :apiURL='apiURL' :recipe='currentRecipe' :currentComments='currentComments' :getComments='getComments'/>
       </div>
     </main>
     <Footer />

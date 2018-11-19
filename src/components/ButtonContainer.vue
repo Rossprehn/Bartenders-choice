@@ -1,7 +1,7 @@
 <template>
   <div id='ButtonContainer'>
     <button v-on:click='showAddCommentComponent' class='top-button' type='button' name='addComment'>{{ showCommentsToggle ? 'Add a Comment' : 'Show Comments' }}</button>
-    <button v-on:click='getFact' type='button' id='new-recipe' class='top-button' name='newFact'>New Recipe</button>
+    <button v-on:click='getRecipe' type='button' id='new-recipe' class='top-button' name='newRecipe'>New Recipe</button>
     <div class='dynamic-display-options'>
       <CommentContainer :commentToggle='commentToggle' :deleteToggle='deleteToggle' :updateToggle='updateToggle' :currentComments='currentComments'/>
       <NewCommentForm :commentToggle='commentToggle' :apiURL='apiURL' :drinkRescip='recipe' :getComments='getComments' :showAddCommentComponent='showAddCommentComponent'/>
@@ -40,8 +40,8 @@ export default {
     }
   },
   methods: {
-    getFact() {
-      this.getFacts()
+    getRecipe() {
+      this.getRecipe()
       this.showCommentComponent()
     },
     showCommentsOnButton() {
