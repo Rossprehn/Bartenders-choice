@@ -3,11 +3,13 @@
     <p>© 2018, Ross Prehn</p>
   </div>
 </template>
+
 <script>
 export default {
   name: 'Footer'
 }
 </script>
+
 <style scoped>
 #Footer {
   display: flex;

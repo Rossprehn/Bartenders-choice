@@ -29,10 +29,10 @@ export default {
   methods: {
     postComment() {
       this.commentObject.drink_id = this.animalFact.drink_id
-      if(event.target.name.value.length > 0 && event.target['new-comment'].value.length > 0){
+      if(event.target.name.value.length > 0 && event.target['new-comment'].value.length > 0) {
         fetch(this.apiURL + 'comments', {
           method: 'POST',
-          headers: new Headers({'Content-Type': 'application/json'}),
+          headers: new Headers({ 'Content-Type': 'application/json' }),
           body: JSON.stringify(this.commentObject)
         })
           .then(res => res.json())
@@ -46,7 +46,7 @@ export default {
       this.commentObject.name = ''
       this.commentObject.comment = ''
       this.commentObject.animal_id = undefined
-    },
+    }
   }
 }
 </script>
