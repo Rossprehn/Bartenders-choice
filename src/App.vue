@@ -88,15 +88,23 @@ export default {
 
 @import url('https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Montserrat');
 
-#app {
-  text-align: center;
+#app-body {
   display: flex;
-  flex-flow: column;
+  flex-flow: row;
   justify-content: flex-start;
+  justify-content: center;
+  /* text-align: center; */
   align-items: center;
   line-height: 1.6;
-  width: 100vw;
-  min-height: 100vh;
+  /* width: 100vw; */
+  min-height: 80vh;
+  /* margin-left: 6rem; */
 }
 
+/* main {
+  display: flex;
+  flex-direction: row;
+} */
+
 </style>
+
