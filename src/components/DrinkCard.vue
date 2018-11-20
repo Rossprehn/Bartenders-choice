@@ -41,8 +41,8 @@ export default {
     margin: .7rem;
   }
   img {
-    max-width: 50vmin;
-    max-height: 40vmin;
+    max-width: 60vmin;
+    max-height: 50vmin;
     border-radius: 5px;
     margin: .35rem;
   }

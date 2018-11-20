@@ -88,7 +88,12 @@ export default {
 
 @import url('https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Montserrat');
 
-#app-body {
+#app-body{
+  display: flex;
+  margin: 2rem;
+}
+
+/* #app-body {
   display: flex;
   flex-flow: row;
   justify-content: space-evenly;
@@ -99,7 +104,7 @@ export default {
   max-width: 100vh;
   padding: 0 10rem 0 8rem;
   margin-left: 3rem;
-}
+} */
 
 /* main {
   display: flex;

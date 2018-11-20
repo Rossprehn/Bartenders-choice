@@ -98,7 +98,7 @@ export default {
 <style scoped>
 
 #ButtonContainer {
-  margin: 10px 0 0 0;
+  margin: 2rem 0 0 0;
   font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-flow: row wrap;
