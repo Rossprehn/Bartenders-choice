@@ -1,6 +1,7 @@
 <template>
   <div id='Header'>
-    <p>Best place for daily new cocktail resipies</p>
+    <img src="../../static/bartenders.png" alt="logo">
+    <p>Shake up your signture drink</p>
   </div>
 </template>
 <script>
@@ -16,8 +17,18 @@ export default {
     width: 100vw;
     height: 12vh;
   }
+
+  img {
+    height: 7vh;
+    padding: 0 2vw;
+    align-self: center;
+  }
+
   p {
     font-family: 'Montserrat', sans-serif;
-    padding-bottom: 3vh;
+    padding-bottom: 2vh;
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
   }
 </style>

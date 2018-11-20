@@ -1,10 +1,10 @@
 <template>
   <div id='DrinkCard'>
     <div id='info'>
-    <h3>Ingredients:</h3>
-    <p id='ingredients'>{{recipe.ingredients}}</p>
-    <h3>Instructions:</h3>
-    <p id='recipe-description'>{{recipe.recipe}}</p>
+      <h3>Ingredients:</h3>
+      <p id='ingredients'>{{recipe.ingredients}}</p>
+      <h3>Instructions:</h3>
+      <p id='recipe-description'>{{recipe.recipe}}</p>
     </div>
     <div id='center'>
       <h2>{{recipe.name}}</h2>
@@ -41,8 +41,8 @@ export default {
     margin: .7rem;
   }
   img {
-    max-width: 70vmin;
-    max-height: 60vmin;
+    max-width: 50vmin;
+    max-height: 40vmin;
     border-radius: 5px;
     margin: .35rem;
   }
@@ -59,7 +59,7 @@ export default {
   }
   p {
     font-size: 1rem;
-    width: 70vmin;
+    width: 40vmin;
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
   }

@@ -91,14 +91,14 @@ export default {
 #app-body {
   display: flex;
   flex-flow: row;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   justify-content: center;
-  /* text-align: center; */
   align-items: center;
   line-height: 1.6;
-  /* width: 100vw; */
   min-height: 80vh;
-  /* margin-left: 6rem; */
+  max-width: 100vh;
+  padding: 0 10rem 0 8rem;
+  margin-left: 3rem;
 }
 
 /* main {

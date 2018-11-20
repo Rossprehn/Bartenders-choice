@@ -30,6 +30,7 @@ export default {
 
 #CommentContainer {
   margin: 30px 0;
+  text-align: center;
 }
 
 ul {
