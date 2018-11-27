@@ -91,6 +91,7 @@ export default {
 #app-body{
   display: flex;
   margin: 2rem;
+  justify-content: center
 }
 
 /* #app-body {

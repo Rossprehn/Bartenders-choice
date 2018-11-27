@@ -63,4 +63,18 @@ export default {
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
   }
+
+    @media screen and (max-width: 686px) {
+    img {
+      max-width: 95vmin;
+      max-height: 90vmin;
+    }
+    p {
+      width: 95vmin;
+    }
+  }
+
+  #fact-description {
+    margin-top: 7px;
+  }
 </style>

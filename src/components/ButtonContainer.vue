@@ -147,3 +147,25 @@ button:hover {
 #update-comment:hover {
   background-color: rgb(242, 229, 59);
 }
+@media screen and (max-width: 761px){
+  #ButtonContainer {
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 686px) {
+  #ButtonContainer {
+    width: 100vw;
+  }
+
+  button {
+    width: 30vw;
+  }
+  .bottom-button {
+    margin-bottom: 5px;
+  }
+  .bottom-button:last-child {
+    margin-bottom: 30px;
+  }
+}
+</style>

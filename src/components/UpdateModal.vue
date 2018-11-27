@@ -108,4 +108,14 @@ button:hover {
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+@media screen and (max-width: 686px) {
+  button {
+    width: 30vmin;
+  }
+
+  #submit-update {
+    width: 30vmin;
+  }
+}
 </style>

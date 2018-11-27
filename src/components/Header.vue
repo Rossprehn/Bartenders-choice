@@ -19,7 +19,7 @@ export default {
   }
 
   img {
-    height: 7vh;
+    height: 13vh;
     padding: 0 2vw;
     align-self: center;
   }
@@ -29,6 +29,29 @@ export default {
     padding-bottom: 2vh;
     display: flex;
     align-items: center;
-    padding-right: 1rem;
+    padding: 1rem;
+  }
+  
+    @media (min-width: 605px) and (max-width: 702px) {
+    p {
+      font-size: 1rem;
+       align-self: flex-end;
+      line-height: normal;
+      font-weight: 100;
+      padding-right: 2vw;
+    }
+  }
+
+  @media screen and (max-width: 604px) {
+    #Header {
+      height: 13vh;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    p {
+      padding: 1vh 0 0 0;
+    }
   }
 </style>

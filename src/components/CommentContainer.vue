@@ -43,4 +43,19 @@ ul {
   margin: 30px 0;
   padding: 9px;
 }
+
+@media screen and (max-width: 686px) {
+  ul {
+    height: 30vh;
+    width: 80vmin;
+  }
+}
+
+p {
+  margin-left: 20px;
+}
+
+small {
+  display: none;
+}
 </style>

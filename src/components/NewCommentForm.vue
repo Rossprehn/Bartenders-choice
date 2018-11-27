@@ -129,4 +129,25 @@ button:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+@media screen and (max-width: 686px) {
+  #NewCommentForm {
+    width: 80vmin;
+  }
+
+  input {
+    width: 80vmin;
+  }
+
+  textarea {
+    width: 80vmin;
+  }
+
+  button {
+    width: 30vmin;
+  }
+
+  #submit {
+    width: 30vmin;
+  }
+}
 </style>
