@@ -23,7 +23,7 @@ import UpdateComment from './UpdateComment'
 
 export default {
   name: 'ButtonContainer',
-  props: ['getRecipe', 'apiURL', 'recipe', 'currentComments', 'getComments'],
+  props: ['getRecipes', 'apiURL', 'recipe', 'currentComments', 'getComments'],
   components: {
     CommentContainer,
     NewCommentForm,
@@ -41,7 +41,7 @@ export default {
   },
   methods: {
     getRecipe() {
-      this.getRecipe()
+      this.getRecipes()
       this.showCommentComponent()
     },
     showCommentsOnButton() {
@@ -51,22 +51,22 @@ export default {
         this.showCommentsToggle = false
       }
     },
-    showAddCommentComponent() {
-      if(this.showCommentsToggle) {
+    showAddCommentComponent(){
+      if(this.showCommentsToggle){
         this.commentToggle = !this.commentToggle
         this.showCommentsOnButton()
       } else {
         this.showCommentComponent()
       }
     },
-    showCommentComponent() {
+    showCommentComponent(){
       this.commentToggle = false,
       this.donateToggle = false,
       this.deleteToggle = false,
       this.updateToggle = false,
       this.showCommentsOnButton()
     },
-    showDonationComponent() {
+    showDonationComponent(){
       if(!this.commentToggle && !this.deleteToggle && !this.updateToggle){
         this.donateToggle = !this.donateToggle
         this.showCommentsOnButton()
@@ -84,7 +84,7 @@ export default {
         this.showCommentsOnButton()
       }
     },
-    showDeleteCommentComponent() {
+    showDeleteCommentComponent(){
       this.deleteToggle = !this.deleteToggle
       this.showCommentsOnButton()
     },

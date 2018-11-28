@@ -13,7 +13,7 @@ export default {
   #Header {
     display: flex;
     flex-flow: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     width: 100vw;
     height: 12vh;
   }
@@ -25,13 +25,13 @@ export default {
   }
 
   p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Dancing Script', cursive;
     padding-bottom: 2vh;
     display: flex;
     align-items: center;
-    padding: 1rem;
+    font-size: 2rem;
   }
-  
+
     @media (min-width: 605px) and (max-width: 702px) {
     p {
       font-size: 1rem;

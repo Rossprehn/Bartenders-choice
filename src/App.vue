@@ -4,7 +4,7 @@
     <main>
       <div id='app-body'>
         <DrinkCard :recipe='currentRecipe'/>
-        <ButtonContainer :getRecipe='getRecipe' :apiURL='apiURL' :recipe='currentRecipe' :currentComments='currentComments' :getComments='getComments'/>
+        <ButtonContainer :getRecipes='getRecipes' :apiURL='apiURL' :recipe='currentRecipe' :currentComments='currentComments' :getComments='getComments'/>
       </div>
     </main>
     <Footer />
@@ -36,10 +36,10 @@ export default {
     }
   },
   mounted() {
-    this.getRecipe()
+    this.getRecipes()
   },
   methods: {
-    getRecipe() {
+    getRecipes() {
       fetch(this.apiURL)
         .then(res => res.json())
         .then(res => {
@@ -87,6 +87,7 @@ export default {
 <style>
 
 @import url('https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
 
 #app-body{
   display: flex;

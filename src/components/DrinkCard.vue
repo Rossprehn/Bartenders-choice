@@ -74,7 +74,7 @@ export default {
     }
   }
 
-  #fact-description {
+  #recipe-description {
     margin-top: 7px;
   }
 </style>
