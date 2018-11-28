@@ -4,7 +4,7 @@
     <button v-on:click='getRecipe' type='button' id='new-recipe' class='top-button' name='newRecipe'>New Recipe</button>
     <div class='dynamic-display-options'>
       <CommentContainer :commentToggle='commentToggle' :deleteToggle='deleteToggle' :updateToggle='updateToggle' :currentComments='currentComments'/>
-      <NewCommentForm :commentToggle='commentToggle' :apiURL='apiURL' :drinkRescip='recipe' :getComments='getComments' :showAddCommentComponent='showAddCommentComponent'/>
+      <NewCommentForm :commentToggle='commentToggle' :apiURL='apiURL' :drinkRecipe='recipe' :getComments='getComments' :showAddCommentComponent='showAddCommentComponent'/>
       <DeleteComment :deleteToggle='deleteToggle' :currentComments='currentComments' :getComments='getComments' :apiURL='apiURL' :showCommentComponent='showCommentComponent'/>
       <UpdateComment :updateToggle='updateToggle' :currentComments='currentComments' :getComments='getComments' :apiURL='apiURL' :showCommentComponent='showCommentComponent'/>
     </div>
