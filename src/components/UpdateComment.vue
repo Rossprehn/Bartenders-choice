@@ -2,7 +2,7 @@
   <div id='UpdateComment' v-if='updateToggle'>
     <form class='update-form' v-on:submit.prevent='toggleModalForSelectedComment'>
       <ul>
-        <li v-for='comment in currentComments' :key='comment' :id='comment.id'>
+        <li v-for='comment in currentComments' :id='comment.id'>
           <h4>{{comment.name}}:</h4>
           <div class='for-update-styling'>
             <p>{{comment.comment}}</p>
@@ -47,7 +47,7 @@ export default {
       let commentList = event.target.parentNode.parentNode.parentNode.parentNode.childNodes
       for(let i = 0; i < commentList.length; i++){
         if(commentList[i].id != checkedID){
-          commentList[i].childNodes[2].childNodes[2].childNodes[0].checked = false
+          commentList[i].Nodes[2].childNodes[2].childNodes[0].checked = false
         }
       }
     },

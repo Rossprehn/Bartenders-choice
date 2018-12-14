@@ -2,7 +2,7 @@
   <div id='DeleteComment' v-if='deleteToggle' >
     <form class='delete-form' v-on:submit.prevent='deleteThisComment'>
       <ul>
-        <li v-for='comment in currentComments' :key='comment' :id='comment.id'>
+        <li v-for='comment in currentComments' :id='comment.id'>
           <h4>{{comment.name}}:</h4>
           <div class='for-delete-styling'>
             <p>{{comment.comment}}</p>
@@ -20,15 +20,15 @@
 </template>
 <script>
 export default {
-  name: 'DeleteComment',
-  props: ['currentComments', 'deleteToggle', 'apiURL', 'showCommentComponent', 'getComments'],
-  data () {
+  name: "DeleteComment",
+  props: ["currentComments", "deleteToggle", "apiURL", "showCommentComponent", "getComments"],
+  data() {
     return {
       commentIds: undefined
     }
   },
   methods: {
-    getIDs (){
+    getIDs(){
       this.commentIds = []
       let commentListObject = event.target.childNodes[0].childNodes
       for(let i = 0; i < commentListObject.length; i++){
@@ -37,20 +37,21 @@ export default {
         }
       }
     },
-    deleteThisComment () {
-      this.getIDs ()
+    deleteThisComment() {
+      this.getIDs()
       this.commentIds.forEach(id => {
-        fetch(this.apiURL + 'comments/' + id, {
-          method: 'DELETE',
+        fetch(this.apiURL + "comments/" + id, {
+          method: "DELETE",
         })
         .then(value => {
-          this.getComments ()
-          this.showCommentComponent ()
+          this.getComments()
+          this.showCommentComponent()
         })
       })
     }
   }
 }
+</script>
 </script>
 <style scoped>
 
