@@ -1,20 +1,20 @@
 <template>
-  <div id='DeleteComment' v-if='deleteToggle' >
-    <form class='delete-form' v-on:submit.prevent='deleteThisComment'>
+  <div id="DeleteComment" v-if="deleteToggle" >
+    <form class="delete-form" v-on:submit.prevent="deleteThisComment">
       <ul>
-        <li v-for='comment in currentComments' :id='comment.id'>
+        <li v-for="comment in currentComments" :id="comment.id">
           <h4>{{comment.name}}:</h4>
-          <div class='for-delete-styling'>
+          <div class="for-delete-styling">
             <p>{{comment.comment}}</p>
-            <label class='container'>
-              <input type='checkbox'>
-              <span class='checkmark'></span>
+            <label class="container">
+              <input type="checkbox">
+              <span class="checkmark"></span>
             </label>
           </div>
         </li>
       </ul>
-      <input class='bottom-button' id='delete-checked' type='submit' value='Delete' />
-      <button class='bottom-button' v-on:click='showCommentComponent' type='button' name='cancel'>Cancel</button>
+      <input class="bottom-button" id="delete-checked" type="submit" value="Delete" />
+      <button class="bottom-button" v-on:click="showCommentComponent" type="button" name="cancel">Cancel</button>
     </form>
   </div>
 </template>
@@ -51,7 +51,6 @@ export default {
     }
   }
 }
-</script>
 </script>
 <style scoped>
 
@@ -118,7 +117,7 @@ small {
 }
 
 .checkmark:after {
-    content: '';
+    content: "";
     position: absolute;
     display: none;
 }

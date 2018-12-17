@@ -16,7 +16,7 @@
 
 export default {
   name: 'NewCommentForm',
-  props: ['commentToggle', 'apiURL', 'drinkRecipe', '`getComments`', 'showAddCommentComponent'],
+  props: ['commentToggle', 'apiURL', 'drinkRecipe', 'getComments', 'showAddCommentComponent'],
   data() {
     return {
       commentObject: {

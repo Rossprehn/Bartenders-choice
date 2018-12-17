@@ -1,34 +1,35 @@
 <template>
-  <div id='ButtonContainer'>
-    <button v-on:click='showAddCommentComponent' class='top-button' type='button' name='addComment'>{{ showCommentsToggle ? 'Add a Comment' : 'Show Comments' }}</button>
-    <button v-on:click='getRecipe' type='button' id='new-recipe' class='top-button' name='newRecipe'>New Recipe</button>
-    <div class='dynamic-display-options'>
-      <CommentContainer :commentToggle='commentToggle' :deleteToggle='deleteToggle' :updateToggle='updateToggle' :currentComments='currentComments'/>
-      <NewCommentForm :commentToggle='commentToggle' :apiURL='apiURL' :drinkRecipe='recipe' :getComments='getComments' :showAddCommentComponent='showAddCommentComponent'/>
-      <DeleteComment :deleteToggle='deleteToggle' :currentComments='currentComments' :getComments='getComments' :apiURL='apiURL' :showCommentComponent='showCommentComponent'/>
-      <UpdateComment :updateToggle='updateToggle' :currentComments='currentComments' :getComments='getComments' :apiURL='apiURL' :showCommentComponent='showCommentComponent'/>
+  <div id="ButtonContainer">
+    <button v-on:click="showAddCommentComponent" class="top-button" type="button" name="addComment">{{ showCommentsToggle ? "Add a Comment" : "Show Comments" }}</button>
+    <button v-on:click="getNewRecipes" type="button" id="new-recipe" class="top-button" name="newRecipes">New Recipes</button>
+    <button v-on:click="showDonationComponent" class="top-button" type="button" name="button">{{ donateToggle ? "Donate Later" : "Donate Now" }}</button>
+    <div class="dynamic-display-options">
+      <CommentContainer :commentToggle="commentToggle" :donateToggle="donateToggle" :deleteToggle="deleteToggle" :updateToggle="updateToggle" :currentComments="currentComments"/>
+      <NewCommentForm :commentToggle="commentToggle" :apiURL="apiURL" :drinkRecipe='recipe' :getRecipes='getRecipes' :showAddCommentComponent="showAddCommentComponent"/>
+      <DeleteComment :deleteToggle="deleteToggle" :currentComments="currentComments" :getComments="getComments" :apiURL="apiURL" :showCommentComponent="showCommentComponent"/>
+      <UpdateComment :updateToggle="updateToggle" :currentComments="currentComments" :getComments="getComments" :apiURL="apiURL" :showCommentComponent="showCommentComponent"/>
     </div>
-    <div class='bottom-button-div'>
-      <button class='bottom-button' v-if='showCommentsToggle' v-on:click='showDeleteCommentComponent' type='button' id='delete-comment' name='button'>Delete Comment</button>
-      <button class='bottom-button' v-if='showCommentsToggle' v-on:click='showUpdateCommentComponent' type='button' id='update-comment' name='button'>Update Comment</button>
+    <div class="bottom-button-div">
+      <button class="bottom-button" v-if="showCommentsToggle" v-on:click="showDeleteCommentComponent" type="button" id="delete-comment" name="button">Delete Comment</button>
+      <button class="bottom-button" v-if="showCommentsToggle" v-on:click="showUpdateCommentComponent" type="button" id="update-comment" name="button">Update Comment</button>
     </div>
   </div>
 </template>
 
 <script>
-import CommentContainer from './CommentContainer'
-import NewCommentForm from './NewCommentForm'
-import DeleteComment from './DeleteComment'
-import UpdateComment from './UpdateComment'
+import CommentContainer from "./CommentContainer"
+import NewCommentForm from "./NewCommentForm"
+import DeleteComment from "./DeleteComment"
+import UpdateComment from "./UpdateComment"
 
 export default {
-  name: 'ButtonContainer',
-  props: ['getRecipes', 'apiURL', 'recipe', 'currentComments', 'getComments'],
+  name: "ButtonContainer",
+  props: ["getRecipes", "apiURL", "recipe", "currentComments", "getComments"],
   components: {
     CommentContainer,
     NewCommentForm,
     DeleteComment,
-    UpdateComment
+    UpdateComment,
   },
   data() {
     return {
@@ -40,7 +41,7 @@ export default {
     }
   },
   methods: {
-    getRecipe() {
+    getNewRecipes(){
       this.getRecipes()
       this.showCommentComponent()
     },
@@ -98,7 +99,7 @@ export default {
 <style scoped>
 
 #ButtonContainer {
-  margin: 2rem 0 0 0;
+  margin: 10px 0 0 0;
   font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-flow: row wrap;
@@ -147,6 +148,7 @@ button:hover {
 #update-comment:hover {
   background-color: rgb(242, 229, 59);
 }
+
 @media screen and (max-width: 761px){
   #ButtonContainer {
     width: 70vw;
@@ -168,4 +170,5 @@ button:hover {
     margin-bottom: 30px;
   }
 }
+
 </style>

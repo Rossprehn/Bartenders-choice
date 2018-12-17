@@ -1,31 +1,31 @@
 <template>
-  <div id='UpdateComment' v-if='updateToggle'>
-    <form class='update-form' v-on:submit.prevent='toggleModalForSelectedComment'>
+  <div id="UpdateComment" v-if="updateToggle">
+    <form class="update-form" v-on:submit.prevent="toggleModalForSelectedComment">
       <ul>
-        <li v-for='comment in currentComments' :id='comment.id'>
+        <li v-for="comment in currentComments" :id="comment.id">
           <h4>{{comment.name}}:</h4>
-          <div class='for-update-styling'>
+          <div class="for-update-styling">
             <p>{{comment.comment}}</p>
-            <label class='container'>
-              <input v-on:change='checkForChecked' type='checkbox'>
-              <span class='checkmark'></span>
+            <label class="container">
+              <input v-on:change="checkForChecked" type="checkbox">
+              <span class="checkmark"></span>
             </label>
           </div>
         </li>
       </ul>
-      <input class='bottom-button' id='update-checked' type='submit' value='Update' v-if='!modalToggle' />
-      <UpdateModal :modalToggle='modalToggle' :toggleModalForSelectedComment='toggleModalForSelectedComment' :commentId='commentId' :commentToUpdate='commentToUpdate' :getComments='getComments' :apiURL='apiURL' :putComment='putComment' :showCommentComponent='showCommentComponent'/>
-      <button class='bottom-button' v-on:click='showCommentComponent' type='button' name='cancel' v-if='!modalToggle' >Cancel</button>
+      <input class="bottom-button" id="update-checked" type="submit" value="Update" v-if="!modalToggle" />
+      <UpdateModal :modalToggle="modalToggle" :toggleModalForSelectedComment="toggleModalForSelectedComment" :commentId="commentId" :commentToUpdate="commentToUpdate" :getComments="getComments" :apiURL="apiURL" :putComment="putComment" :showCommentComponent="showCommentComponent"/>
+      <button class="bottom-button" v-on:click="showCommentComponent" type="button" name="cancel" v-if="!modalToggle" >Cancel</button>
     </form>
   </div>
 </template>
 
 <script>
-import UpdateModal from './UpdateModal'
+import UpdateModal from "./UpdateModal"
 
 export default {
-  name: 'UpdateComment',
-  props: ['updateToggle', 'currentComments', 'showCommentComponent', 'getComments', 'apiURL'],
+  name: "UpdateComment",
+  props: ["updateToggle", "currentComments", "showCommentComponent", "getComments", "apiURL"],
   components: {
     UpdateModal,
   },
@@ -35,9 +35,9 @@ export default {
       commentToUpdate: undefined,
       commentId: undefined,
       updateObject: {
-        'name': undefined,
-        'comment': undefined,
-        'drink_id': undefined
+        "name": undefined,
+        "comment": undefined,
+        "drink_id": undefined
       }
     }
   },
@@ -47,7 +47,7 @@ export default {
       let commentList = event.target.parentNode.parentNode.parentNode.parentNode.childNodes
       for(let i = 0; i < commentList.length; i++){
         if(commentList[i].id != checkedID){
-          commentList[i].Nodes[2].childNodes[2].childNodes[0].checked = false
+          commentList[i].childNodes[2].childNodes[2].childNodes[0].checked = false
         }
       }
     },
@@ -69,11 +69,11 @@ export default {
     putComment() {
       this.updateObject.drink_id = this.commentToUpdate[0].drink_id
       this.updateObject.name = event.target.name.value
-      this.updateObject.comment = event.target['new-comment'].value
-      if(event.target.name.value.length > 0 && event.target['new-comment'].value.length > 0) {
-        fetch(this.apiURL + 'comments/' + this.commentId, {
-          method: 'PUT',
-          headers: new Headers({ 'Content-Type': 'application/json' }),
+      this.updateObject.comment = event.target["new-comment"].value
+      if(event.target.name.value.length > 0 && event.target["new-comment"].value.length > 0){
+        fetch(this.apiURL + "comments/" + this.commentId, {
+          method: "PUT",
+          headers: new Headers({"Content-Type": "application/json"}),
           body: JSON.stringify(this.updateObject)
         })
           .then(res => res.json())
@@ -82,11 +82,11 @@ export default {
             this.showCommentComponent()
           })
       }
-      this.modalToggle = false
-      this.commentToUpdate = undefined
-      this.commentId = undefined
-      this.updateObject.name = ''
-      this.updateObject.comment = ''
+      this.modalToggle = false,
+      this.commentToUpdate = undefined,
+      this.commentId = undefined,
+      this.updateObject.name = ""
+      this.updateObject.comment = ""
       this.updateObject.drink_id = undefined
     }
   }
@@ -158,7 +158,7 @@ small {
 }
 
 .checkmark:after {
-    content: '';
+    content: "";
     position: absolute;
     display: none;
 }
@@ -182,6 +182,7 @@ small {
 .bottom-button {
   margin-bottom: 30px;
 }
+
 
 button {
   width: 150px;

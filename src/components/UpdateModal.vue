@@ -1,15 +1,15 @@
 <template>
-  <div id='UpdateModal' v-if='modalToggle'>
-    <div id='myModal' class='modal'>
-      <div class='modal-content'>
-        <form class='send-update' v-on:submit.prevent='putComment'>
-          <label id='commenters-name'>Commenter's Name: </label>
-          <input type='text' id='name' :value='commentToUpdate[0].name'/>
+  <div id="UpdateModal" v-if="modalToggle">
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <form class="send-update" v-on:submit.prevent="putComment">
+          <label id="commenters-name">Commenter's Name: </label>
+          <input type="text" id="name" :value="commentToUpdate[0].name"/>
           <label>Comment: </label>
-          <textarea id='new-comment'  rows='8' cols='100' :value='commentToUpdate[0].comment'></textarea>
-          <div class='buttons'>
-            <input id='submit-update' type='submit' value='Update' />
-            <button v-on:click='toggleModalForSelectedComment' type='button' name='cancel'>Cancel</button>
+          <textarea id="new-comment"  rows="8" cols="100" :value="commentToUpdate[0].comment"></textarea>
+          <div class="buttons">
+            <input id="submit-update" type="submit" value="Update" />
+            <button v-on:click="toggleModalForSelectedComment" type="button" name="cancel">Cancel</button>
           </div>
         </form>
       </div>
@@ -18,8 +18,8 @@
 </template>
 <script>
 export default {
-  name: 'UpdateModal',
-  props: ['modalToggle', 'toggleModalForSelectedComment', 'commentId', 'commentToUpdate', 'getComments', 'apiURL', 'putComment', 'showCommentComponent']
+  name: "UpdateModal",
+  props: ["modalToggle", "toggleModalForSelectedComment", "commentId", "commentToUpdate", "getComments", "apiURL", "putComment", "showCommentComponent"],
 }
 </script>
 <style scoped>
