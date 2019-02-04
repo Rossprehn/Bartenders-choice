@@ -28,3 +28,12 @@ npm run build --report`
 Vue: If you need help with Vue visit the Vue docs. For a detailed explanation on how vue-cli works, check out the guide and docs for vue-loader.
 
 Stripe: In order to use the stripe functionality of this app you will need to create a stripe account here. From there you will need to click on your dashboard and then find your publishable key and secret key, which should be located under the API menu on the lift hand side. You will then need to include these keys in the code you cloned, the secret key goes in the backend .env file you will need to make and the publishable key goes in the frontend Donation component. You can find the stripe docs here
+
+## Technologies
+
+Vue.js, JavaScript, HTML, CSS, Stripe
+
+##Author 
+
+[Ross Prehn](https://github.com/Rossprehn)
+
