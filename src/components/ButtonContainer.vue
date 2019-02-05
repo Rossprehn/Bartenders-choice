@@ -2,9 +2,11 @@
   <div id="ButtonContainer">
     <button v-on:click="showAddCommentComponent" class="top-button" type="button" name="addComment">{{ showCommentsToggle ? "Add a Comment" : "Show Comments" }}</button>
     <button v-on:click="getNewRecipes" type="button" id="new-recipe" class="top-button" name="newRecipes">New Recipes</button>
+     <button v-on:click="showDonationComponent" class="top-button" type="button" name="button">{{ donateToggle ? "Donate Later" : "Donate Now" }}</button>
     <div class="dynamic-display-options">
       <CommentContainer :commentToggle="commentToggle" :donateToggle="donateToggle" :deleteToggle="deleteToggle" :updateToggle="updateToggle" :currentComments="currentComments"/>
       <NewCommentForm :commentToggle="commentToggle" :apiURL="apiURL" :drinkRecipe='recipe' :getRecipes='getRecipes' :getComments="getComments" :showAddCommentComponent="showAddCommentComponent"/>
+       <Donation :donateToggle="donateToggle" :showCommentComponent="showCommentComponent" :apiURL="apiURL"/>
       <DeleteComment :deleteToggle="deleteToggle" :currentComments="currentComments" :getComments="getComments" :apiURL="apiURL" :showCommentComponent="showCommentComponent"/>
       <UpdateComment :updateToggle="updateToggle" :currentComments="currentComments" :getComments="getComments" :apiURL="apiURL" :showCommentComponent="showCommentComponent"/>
     </div>
@@ -18,6 +20,7 @@
 <script>
 import CommentContainer from "./CommentContainer"
 import NewCommentForm from "./NewCommentForm"
+import Donation from "./Donation"
 import DeleteComment from "./DeleteComment"
 import UpdateComment from "./UpdateComment"
 
@@ -27,6 +30,7 @@ export default {
   components: {
     CommentContainer,
     NewCommentForm,
+    Donation,
     DeleteComment,
     UpdateComment,
   },
