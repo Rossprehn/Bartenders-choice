@@ -12,7 +12,8 @@ Using the app does not require any installation, just visit https://bartenders-c
 
 ## Build Setup
 
-``install dependencies
+``` 
+install dependencies
 npm install
 
 serve with hot reload at localhost:8080
@@ -22,8 +23,8 @@ build for production with minification
 npm run build
 
 build for production and view the bundle analyzer report
-npm run build --report``
-
+npm run build --report
+```
 
 Vue: If you need help with Vue visit the Vue docs. For a detailed explanation on how vue-cli works, check out the guide and docs for vue-loader.
 
