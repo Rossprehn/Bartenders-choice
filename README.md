@@ -1,5 +1,5 @@
 # Bartenders-Choice
-![hero](https://i.imgur.com/zqS51Im.png)
+![hero](https://i.imgur.com/hhHK5Fa.png)
 
 ## User Experience
 
